@@ -2,7 +2,7 @@ name: "Actions Test"
 on: [push]
 
 jobs:
-  Explore-GitHub-Actions:
+  repo_details:
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
