@@ -24,7 +24,6 @@ jobs:
       id: fmt
       run: terraform fmt -check
       continue-on-error: true
-      on: [push]
     
     - name: Terraform Init
       id: init
