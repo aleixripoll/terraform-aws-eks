@@ -1,14 +1,19 @@
 name: "Deploy"
-on: ["deployment"]
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   deployment:
     runs-on: "ubuntu-latest"
+    environment: test
+    concurrency: test
     steps:
       - uses: actions/checkout@v1
 
       - name: "Deploy"
-        uses: "deliverybot/helm@v1"
+        uses: "deliverybot/helm@v3"
         with:
           release: "nginx"
           namespace: "default"
