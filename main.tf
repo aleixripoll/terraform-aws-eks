@@ -8,6 +8,6 @@ locals {
   region          = "eu-west-1"
 
   tags = {
-    Name    = local.name
+    Name = local.name
   }
 }
