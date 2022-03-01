@@ -13,8 +13,7 @@ jobs:
     # Set the working directory to main for the config files
     defaults:
       run:
-        shell: bash
-        working-directory: ./main
+        working-directory: ${{ env.tf_actions_working_dir }}
 
     steps:
     - uses: actions/checkout@v2
